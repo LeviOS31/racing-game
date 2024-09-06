@@ -42,7 +42,7 @@ public class results : MonoBehaviour
 
     private IEnumerator Showtimes()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
 
         float besttime1 = player1.Min();
         float besttime2 = player2.Min();
@@ -62,7 +62,7 @@ public class results : MonoBehaviour
             player1obj.transform.position = loser.position;
             player2obj.transform.rotation = winner.rotation;
             player1obj.transform.rotation = loser.rotation;
-            text.GetComponent<TextMeshProUGUI>().text = "PLAYER 2 HAS WON WITH A TIME OF:" + FormatTime(besttime2);
+            text.GetComponent<TextMeshProUGUI>().text = "PLAYER 2 HAS WON WITH A TIME OF " + FormatTime(besttime2);
 
         }
 
